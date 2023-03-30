@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Practice</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        navbar {
+            background-color: rgb(35, 34, 34);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            margin-bottom: 30vh;
+        }
+
+        @media only screen and (max-width: 980px) {
+            navbar {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            #gridContainer {
+                grid-template-columns: auto !important;
+                justify-content: center;
+            }
+        }
+
+        .nav-link {
+            color: white;
+            padding: 50px;
+            font-size: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #gridContainer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 80%;
+            margin-left: 14.5%;
+            
+            gap: 50px 10px;
+        }
+
+        .grid-item {
+            width: 30vw;
+            height: 30vh;
+        }
+
+        .grid-item > img {
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <navbar>
+        <div class="nav-link">
+            Home
+        </div>
+        <div class="nav-link">
+            Services
+        </div>
+        <div class="nav-link">
+            About Us
+        </div>
+    </navbar>
+
+    <h2>Photo Gallery</h2>
+    <div id="gridContainer">
+        <div class="grid-item">
+            <img src="images/cityscape.jpg">
+        </div>
+        <div class="grid-item">
+            <img src="images/forest1.jpg">
+        </div>
+        <div class="grid-item">
+            <img src="images/landscape.png">
+        </div>
+        <div class="grid-item">
+            <img src="images/oceanscape.jpg">
+        </div>
+    </div>
+</body>
+</html>
